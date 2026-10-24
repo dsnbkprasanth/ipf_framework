@@ -1,0 +1,102 @@
+{
+  "is_demo": false,
+  "stage1_summary": {
+    "n_tested_both": 12862,
+    "n_same_direction": 9403,
+    "n_replicated_up": 2676,
+    "n_replicated_down": 2075
+  },
+  "pseudobulk_deg_counts": [
+    {
+      "cell_type": "Epithelial",
+      "up": 300,
+      "down": 51
+    },
+    {
+      "cell_type": "Immune",
+      "up": 29,
+      "down": 0
+    },
+    {
+      "cell_type": "Endothelial",
+      "up": 9,
+      "down": 3
+    },
+    {
+      "cell_type": "Mesenchymal",
+      "up": 0,
+      "down": 0
+    }
+  ],
+  "positive_control_ranks": {},
+  "robustness": {
+    "observed_concordance": 1.0,
+    "null_mean": 0.7308936013470849,
+    "null_std": 0.005083863298928381,
+    "n_perm": 2000,
+    "empirical_p": 0.0004997501249375312,
+    "empirical_p_str": "<0.001"
+  },
+  "top_prioritized": [
+    "hydrocortisone",
+    "palmitic acid",
+    "valproic acid",
+    "troglitazone",
+    "testosterone",
+    "amoxicillin",
+    "heregulin",
+    "abiraterone",
+    "anastrozole",
+    "rosiglitazone",
+    "sevoflurane",
+    "atorvastatin",
+    "dexamethasone",
+    "lapatinib",
+    "bexarotene",
+    "foretinib",
+    "harman",
+    "gefitinib",
+    "etanercept",
+    "mek inhibitor (meki",
+    "tibolone",
+    "deferasirox",
+    "argyrin a",
+    "lubiprostone",
+    "aminolevulinic acid",
+    "phorbol ester",
+    "l-arginine",
+    "citalopram",
+    "d-serine",
+    "rituximab",
+    "carbidopa",
+    "diclofenac",
+    "tretinoin",
+    "torcetrapib",
+    "apratoxin a",
+    "ascorbic acid",
+    "vancomycin",
+    "formoterol",
+    "all-trans retinoic acid",
+    "pioglitazone",
+    "thapsigargin",
+    "estradiol",
+    "nitric oxide",
+    "letrozole",
+    "ethinyl estradiol",
+    "n-methylformamide",
+    "methylphenidate",
+    "clozapine",
+    "doxycycline",
+    "genistein",
+    "alpha-tocopherol",
+    "promegestone",
+    "insulin",
+    "capsaicin",
+    "deta nonoate",
+    "actinomycin d",
+    "casiigly",
+    "mepenzolate bromide",
+    "ubiquinol",
+    "motexafin gadolinium"
+  ]
+}

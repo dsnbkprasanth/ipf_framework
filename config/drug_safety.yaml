@@ -1,0 +1,52 @@
+# Safety / suitability annotation used by the perturbational prioritization stage.
+# Mirrors the reference framework's safety-aware penalty: compounds are penalized
+# for high-risk classes and credited for known pulmonary/antifibrotic relevance.
+# Transcriptomic reversal is a HYPOTHESIS, never evidence of therapeutic efficacy.
+
+# Positive controls: approved IPF antifibrotics. If the connectivity scoring is
+# meaningful, these should rank as strong reversers.
+positive_controls: [nintedanib, pirfenidone]
+
+# MoA / target credit (adds to translational score if compound's known target
+# overlaps a disease-relevant pathway).
+pathway_targets:
+  tgfb:  [TGFBR1, TGFBR2, SMAD3, ALK5]
+  pdgf:  [PDGFRA, PDGFRB, KIT, FLT3]
+  src:   [SRC, YES1, LCK]
+  jak:   [JAK1, JAK2, JAK3, TYK2]
+  mtor:  [MTOR, PIK3CA, AKT1]
+  hdac:  [HDAC1, HDAC2, HDAC6]
+  rho_rock: [ROCK1, ROCK2]
+  pparg: [PPARG]
+  hmgcr: [HMGCR]
+  ampk:  [PRKAA1, PRKAA2]
+  retinoid: [RARA, RARB, RXRA]
+  senolytic: [BCL2, BCL2L1]
+  sirtuin: [SIRT1]
+  nfkb: [RELA, NFKB1]
+
+# Safety penalties by risk class (higher = more deprioritized).
+risk_classes:
+  cardiotoxic: 3
+  hepatotoxic: 3
+  pulmonary_toxic: 4        # extra caution for a lung indication
+  cytotoxic_chemo: 4
+  genotoxic: 5             # DNA-damaging agents (BPDE, arsenite, ...)
+  environmental: 5        # environmental toxicants / non-therapeutics
+  neuropsychiatric: 2
+  steroid_like: 2
+  hormone: 2
+  immunosuppressant_high: 2
+
+# Scoring weights for the composite translational score.
+weights:
+  reversal_recurrence: 1.0     # L1000 connectivity recurrence
+  multi_signature_support: 1.0 # reverses >1 of the queried signatures
+  module_support: 1.0          # opposes the TGFb / fibroinflammatory modules
+  known_target_interpretability: 1.0
+  safety_penalty: 1.0
+
+hard_exclude:
+  - troglitazone      # withdrawn worldwide (hepatotoxicity, 2000)
+  - gefitinib         # drug-induced interstitial lung disease label
+  - dasatinib         # class-level pulmonary toxicity (pleural effusion/ILD)

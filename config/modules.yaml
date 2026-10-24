@@ -1,0 +1,43 @@
+# Curated a-priori gene modules for the IPF remodeling framework.
+# Analogous to the fibroinflammatory / AKT modules of the reference HF framework.
+# Genes are HGNC symbols. Edit freely; the pipeline uses whatever is present in
+# the tested gene universe (missing genes are ignored, and n is reported).
+
+modules:
+  # --- Aberrant epithelial reprogramming (IPF-specific hallmark) ---
+  aberrant_epithelial:
+    label: Aberrant basaloid / epithelial reprogramming
+    genes: [KRT5, KRT17, KRT8, KRT7, CDKN1A, CDKN2A, TP63, SOX4, SOX9,
+            ITGB6, ITGAV, MDK, GDF15, PRSS2, EPHB2, CEACAM5, SFN, VIM]
+
+  # --- Myofibroblast / ECM remodeling (core fibrotic program) ---
+  myofibroblast_ecm:
+    label: Myofibroblast activation / ECM
+    genes: [COL1A1, COL1A2, COL3A1, COL5A2, CTHRC1, POSTN, FN1, ACTA2,
+            TIMP1, SPARC, FBN1, ELN, TNC, COMP, LUM, LOXL1, LOXL2, THBS2,
+            FKBP10, CDH2]
+
+  # --- Profibrotic / SPP1 macrophage program (inflammatory-stromal) ---
+  profibrotic_macrophage:
+    label: Profibrotic (SPP1+) myeloid
+    genes: [SPP1, MARCO, CHI3L1, MERTK, TREM2, GPNMB, CD68, LGMN, CCL2,
+            CCL18, LPL, APOE, FABP4, MMP9, MMP7, SIGLEC1, CTSK]
+
+  # --- Fibroinflammatory core (integrated fibroblast + myeloid, mirrors ref) ---
+  fibroinflammatory_core:
+    label: Fibroinflammatory core
+    genes: [POSTN, COL1A1, COL3A1, FN1, CTHRC1, TNC, SPP1, CCL2, CCL18,
+            CHI3L1, MMP7, TIMP1, IL1B, TNF, CXCL9, S100A8, S100A9]
+
+  # --- TGF-beta / core fibrogenic signaling coordinate ---
+  #     (the IPF analog of the reference paper's context-dependent AKT module) ---
+  tgfb_signaling:
+    label: TGF-beta signaling coordinate
+    genes: [TGFB1, TGFB2, TGFBR1, TGFBR2, SMAD2, SMAD3, SMAD4, SMAD7,
+            SERPINE1, CTGF, CCN2, THBS1, LTBP1, TGFBI, ID1, JUN, FOS, WNT5A]
+
+  # --- Epithelial stress / senescence (context program) ---
+  epithelial_stress:
+    label: Epithelial stress / senescence
+    genes: [CDKN1A, CDKN2A, TP53, GDF15, MDK, HMOX1, ATF3, DDIT3, GADD45A,
+            EGR1, HSPA5, XBP1]

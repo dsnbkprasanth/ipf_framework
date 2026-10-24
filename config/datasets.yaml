@@ -1,0 +1,73 @@
+# Public transcriptomic resources and analytical roles in the IPF framework.
+# Mirrors the discovery / localization / validation layering of the reference
+# heart-failure framework, transplanted to idiopathic pulmonary fibrosis (IPF).
+#
+# NOTE: These are the RECOMMENDED public resources. The pipeline does not bundle
+# any patient data. Download them yourself (see scripts/DOWNLOAD_DATA.md) and
+# point the config/GUI at the local files. A built-in synthetic demo lets you
+# run the whole workflow with no downloads.
+
+datasets:
+  - id: GSE47460
+    name: LGRC / Lung Genomics Research Consortium
+    data_type: Human lung bulk microarray (Agilent)
+    role: bulk_discovery
+    description: >
+      Large ILD cohort (IPF and other interstitial lung disease vs control).
+      Primary bulk discovery cohort for reproducible IPF signature.
+    url: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE47460
+
+  - id: GSE150910
+    name: Furrer / Yang IPF-CHP-control RNA-seq
+    data_type: Human lung bulk RNA-seq
+    role: bulk_discovery
+    description: >
+      Bulk RNA-seq of IPF, chronic hypersensitivity pneumonitis and controls.
+      Second discovery cohort for cross-cohort replication.
+    url: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE150910
+
+  - id: GSE134692
+    name: IPF vs control lung RNA-seq
+    data_type: Human lung bulk RNA-seq
+    role: bulk_external
+    description: >
+      External bulk RNA-seq validation / etiology-sensitivity check.
+    url: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE134692
+
+  - id: GSE135893
+    name: Habermann et al. 2020 (Vanderbilt/TGen) pulmonary fibrosis atlas
+    data_type: Human lung scRNA-seq atlas
+    role: pseudobulk_localization
+    description: >
+      Main donor-level cell-type pseudobulk localization layer. 114,396 cells,
+      20 PF and 10 control lungs, 31 cell subsets incl. aberrant epithelial and
+      multiple fibroblast states. DOI 10.1126/sciadv.aba1972.
+    url: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE135893
+
+  - id: GSE136831
+    name: Adams et al. 2020 (Yale) IPF cell atlas
+    data_type: Human lung scRNA-seq atlas
+    role: snrna_external
+    description: >
+      Directional external single-cell support. 312,928 cells; 32 IPF, controls,
+      COPD. Aberrant basaloid cells, IPF myofibroblasts, profibrotic macrophages.
+      DOI 10.1126/sciadv.aba1983.
+    url: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE136831
+
+  - id: LINCS_L1000
+    name: LINCS L1000 / L1000FWD perturbational signatures
+    data_type: Perturbational transcriptomic signatures
+    role: perturbational
+    description: >
+      Drug-repositioning hypothesis generation by connectivity/signature
+      reversal. Use a downloaded L1000 signature matrix (offline mode) or the
+      L1000FWD/CLUE API (online mode).
+    url: https://maayanlab.cloud/L1000FWD/
+
+# Which datasets play which role by default (used by the CLI / GUI).
+roles:
+  bulk_discovery: [GSE47460, GSE150910]
+  bulk_external:  [GSE134692]
+  pseudobulk_localization: GSE135893
+  snrna_external: GSE136831
+  perturbational: LINCS_L1000

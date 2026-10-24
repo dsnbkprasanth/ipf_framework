@@ -1,0 +1,2 @@
+method,primary_up,primary_down,deseq2_sig_up_RNAseq,deseq2_sig_down_RNAseq,deseq2_hybrid_replicated_up,deseq2_hybrid_replicated_down,pct_hybrid_up_within_primary,pct_hybrid_down_within_primary,log2FC_corr_vs_primary
+"DESeq2 (pydeseq2), RNA-seq cohort + microarray",2676,2075,5027,4404,2549,2312,97.3,88.3,0.819

@@ -1,0 +1,82 @@
+# Curated ligand-receptor axes for focused prioritization in IPF.
+# Mirrors the reference framework's focused (not exhaustive) L-R approach:
+# each axis is scored by disease-associated expression of the ligand, plausible
+# sender/receiver compartments and curated pathway membership. This is NOT
+# CellChat/CellPhoneDB/NicheNet inference.
+
+axes:
+  - ligand: TGFB1
+    receptor: TGFBR1
+    sender: [macrophage, epithelial]
+    receiver: [fibroblast]
+    route: TGF-beta
+  - ligand: TGFB1
+    receptor: TGFBR2
+    sender: [macrophage, epithelial]
+    receiver: [fibroblast]
+    route: TGF-beta
+  - ligand: PDGFB
+    receptor: PDGFRB
+    sender: [epithelial, endothelial]
+    receiver: [fibroblast]
+    route: PDGF
+  - ligand: PDGFA
+    receptor: PDGFRA
+    sender: [epithelial]
+    receiver: [fibroblast]
+    route: PDGF
+  - ligand: SPP1
+    receptor: CD44
+    sender: [macrophage]
+    receiver: [fibroblast, epithelial]
+    route: matrix-integrin
+  - ligand: SPP1
+    receptor: ITGAV
+    sender: [macrophage]
+    receiver: [fibroblast]
+    route: matrix-integrin
+  - ligand: POSTN
+    receptor: ITGAV
+    sender: [fibroblast]
+    receiver: [fibroblast, epithelial]
+    route: matrix-integrin
+  - ligand: POSTN
+    receptor: ITGB5
+    sender: [fibroblast]
+    receiver: [fibroblast]
+    route: matrix-integrin
+  - ligand: COL1A1
+    receptor: ITGA1
+    sender: [fibroblast]
+    receiver: [fibroblast, epithelial]
+    route: matrix-integrin
+  - ligand: CTGF
+    receptor: ITGB2
+    sender: [fibroblast, epithelial]
+    receiver: [fibroblast]
+    route: matrix-integrin
+  - ligand: CCL2
+    receptor: CCR2
+    sender: [fibroblast, epithelial]
+    receiver: [macrophage]
+    route: chemokine
+  - ligand: CXCL12
+    receptor: CXCR4
+    sender: [fibroblast]
+    receiver: [epithelial, macrophage]
+    route: chemokine
+  - ligand: IL13
+    receptor: IL13RA1
+    sender: [immune]
+    receiver: [fibroblast, epithelial]
+    route: cytokine
+  - ligand: WNT7B
+    receptor: FZD1
+    sender: [epithelial]
+    receiver: [fibroblast]
+    route: WNT
+  - ligand: CHI3L1
+    receptor: IL13RA2
+    sender: [macrophage]
+    receiver: [fibroblast]
+    route: cytokine

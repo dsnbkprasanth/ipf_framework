@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "IPF Transcriptomic Framework (ipffx)"
+version: "1.0.2"
+date-released: "2026-10-24"
+authors:
+  - family-names: "Prasanth"
+    given-names: "DSNBK"
+    email: "dsnbkprasanth@gmail.com"
+    affiliation: "School of Pharmacy & Technology Management, SVKM's NMIMS, Hyderabad, India"
+abstract: >
+  Reproducible cross-cohort and broad-compartment-resolved transcriptomic
+  framework for idiopathic pulmonary fibrosis: bulk DE concordance,
+  composition-adjusted DESeq2, donor-level pseudobulk module scoring, focused
+  ligand-receptor prioritisation, external bulk and single-nucleus
+  corroboration, and LINCS safety-aware transcriptomic-reversal
+  hypothesis generation.
+keywords:
+  - idiopathic pulmonary fibrosis
+  - transcriptomics
+  - DESeq2
+  - CIBERSORT
+  - LIANA
+  - LINCS
+  - drug repositioning
+license: MIT
+repository-code: "https://github.com/dsnbkprasanth/ipf_framework"

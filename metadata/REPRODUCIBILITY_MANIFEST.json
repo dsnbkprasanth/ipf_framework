@@ -1,0 +1,80 @@
+{
+  "release_version": "v1.0.2",
+  "release_date": "2026-10-24",
+  "python_version_floor": "3.10",
+  "environment_file": "environment.yml",
+  "pip_requirements_file": "requirements.txt",
+  "configuration_files": [
+    "config/datasets.yaml",
+    "config/modules.yaml",
+    "config/ligand_receptor.yaml",
+    "config/drug_safety.yaml"
+  ],
+  "entry_points": [
+    {
+      "name": "demo",
+      "command": "make demo",
+      "description": "synthetic-data end-to-end"
+    },
+    {
+      "name": "real",
+      "command": "make real",
+      "description": "full real-data pipeline (requires downloaded GEO cohorts + atlases)"
+    },
+    {
+      "name": "gui",
+      "command": "make gui",
+      "description": "Streamlit GUI"
+    }
+  ],
+  "data_sources": [
+    {
+      "id": "GSE150910",
+      "type": "bulk RNA-seq",
+      "role": "discovery cohort",
+      "n_IPF": 103,
+      "n_control": 103,
+      "source": "NCBI GEO"
+    },
+    {
+      "id": "GSE47460",
+      "type": "bulk array",
+      "role": "replication cohort",
+      "n_IPF": 160,
+      "n_control": 108,
+      "source": "NCBI GEO"
+    },
+    {
+      "id": "GSE134692",
+      "type": "bulk RNA-seq",
+      "role": "third cohort / external bulk",
+      "n_IPF": 46,
+      "n_control": 50,
+      "source": "NCBI GEO"
+    },
+    {
+      "id": "GSE135893",
+      "type": "scRNA-seq",
+      "role": "donor-level pseudobulk atlas",
+      "n_IPF": 12,
+      "n_control": 10,
+      "source": "NCBI GEO"
+    }
+  ],
+  "random_seeds": {
+    "numpy_seed": 42,
+    "scikit_learn_seed": 42,
+    "deseq2_seed_note": "DESeq2 is deterministic given inputs; no seed required"
+  },
+  "checksums_file": "metadata/CHECKSUMS.sha256",
+  "determinism_note": "pydeseq2 0.4.12 pinned; anndata<0.11; numpy<2. Minor nu-SVR variation possible across BLAS backends.",
+  "reproduction_steps": [
+    "git clone https://github.com/dsnbkprasanth/ipf_framework",
+    "cd ipf_framework",
+    "git checkout v1.0.2",
+    "conda env create -f environment.yml",
+    "conda activate ipffx",
+    "make demo    # verify installation on synthetic data",
+    "make download && make prepare && make atlas && make real    # full real-data run"
+  ]
+}

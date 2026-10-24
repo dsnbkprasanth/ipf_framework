@@ -1,0 +1,16 @@
+axis,route,ligand_log2FC,receptor_log2FC,sender,receiver,evidence_score
+CCL2-CCR2,chemokine,2.5370008933433716,,"fibroblast,epithelial",macrophage,2.7870008933433716
+TGFB1-TGFBR2,TGF-beta,1.61190145163226,,"macrophage,epithelial",fibroblast,1.86190145163226
+TGFB1-TGFBR1,TGF-beta,1.61190145163226,,"macrophage,epithelial",fibroblast,1.86190145163226
+IL13-IL13RA1,cytokine,0.517647956692328,0.6761407200669387,immune,"fibroblast,epithelial",1.3557183167257973
+PDGFA-PDGFRA,PDGF,0.9686274442800946,,epithelial,fibroblast,1.2186274442800946
+WNT7B-FZD1,WNT,0.8176992389131303,,epithelial,fibroblast,1.0676992389131303
+CTGF-ITGB2,matrix-integrin,0.7776208876076165,,"fibroblast,epithelial",fibroblast,1.0276208876076165
+POSTN-ITGAV,matrix-integrin,,0.6567242875613237,fibroblast,"fibroblast,epithelial",0.8283621437806619
+PDGFB-PDGFRB,PDGF,0.41283530933688156,,"epithelial,endothelial",fibroblast,0.6628353093368815
+COL1A1-ITGA1,matrix-integrin,,0.1945037821491873,fibroblast,"fibroblast,epithelial",0.5972518910745936
+SPP1-CD44,matrix-integrin,,-0.021700813671597707,macrophage,"fibroblast,epithelial",0.5
+CXCL12-CXCR4,chemokine,,-0.006683673437393622,fibroblast,"epithelial,macrophage",0.5
+SPP1-ITGAV,matrix-integrin,,,macrophage,fibroblast,0.25
+POSTN-ITGB5,matrix-integrin,,,fibroblast,fibroblast,0.25
+CHI3L1-IL13RA2,cytokine,,,macrophage,fibroblast,0.25

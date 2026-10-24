@@ -1,0 +1,7 @@
+Resource,Name,Data type,Analytical role,Description
+GSE47460,LGRC / Lung Genomics Research Consortium,Human lung bulk microarray (Agilent),bulk_discovery,Large ILD cohort (IPF and other interstitial lung disease vs control). Primary bulk discovery cohort for reproducible IPF signature.
+GSE150910,Furrer / Yang IPF-CHP-control RNA-seq,Human lung bulk RNA-seq,bulk_discovery,"Bulk RNA-seq of IPF, chronic hypersensitivity pneumonitis and controls. Second discovery cohort for cross-cohort replication."
+GSE134692,IPF vs control lung RNA-seq,Human lung bulk RNA-seq,bulk_external,External bulk RNA-seq validation / etiology-sensitivity check.
+GSE135893,Habermann et al. 2020 (Vanderbilt/TGen) pulmonary fibrosis atlas,Human lung scRNA-seq atlas,pseudobulk_localization,"Main donor-level cell-type pseudobulk localization layer. 114,396 cells, 20 PF and 10 control lungs, 31 cell subsets incl. aberrant epithelial and multiple fibroblast states. DOI 10.1126/sciadv.aba1972."
+GSE136831,Adams et al. 2020 (Yale) IPF cell atlas,Human lung scRNA-seq atlas,snrna_external,"Directional external single-cell support. 312,928 cells; 32 IPF, controls, COPD. Aberrant basaloid cells, IPF myofibroblasts, profibrotic macrophages. DOI 10.1126/sciadv.aba1983."
+LINCS_L1000,LINCS L1000 / L1000FWD perturbational signatures,Perturbational transcriptomic signatures,perturbational,Drug-repositioning hypothesis generation by connectivity/signature reversal. Use a downloaded L1000 signature matrix (offline mode) or the L1000FWD/CLUE API (online mode).
